@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>표 만들기</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: seperate;
+        }
+
+        th,
+        td {
+            padding: 15px, 30px
+        }
+
+        /* thead {
+            background-color: white;
+        }
+
+        tbody {
+            background-color: white;
+        } */
+    </style>
+</head>
+
+<body>
+    <table>
+        <!-- 내용을 채우지 않은 칸은 기본적인 사이즈로 고정 -->
+        <caption>표만들기</caption>
+        <tr>
+            <td>CEll</td>
+            <td>ceLL</td>
+            <td>cEll</td>
+        </tr>
+        <tr>
+            <td>CEll4</td>
+            <td>ceLL5</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <hr />
+    <h2>상품구성</h2>
+    <table>
+        <caption>선물용과 가정용 상품 구성</caption>
+        <!-- 행 -->
+        <thead>
+            <tr>
+                <!-- 열 -->
+                <th>용도</th>
+                <th>중략</th>
+                <th>개수</th>
+                <th>가격</th>
+                <!-- th는 가운제로 정렬하고 강조해준다 -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>선물용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>35,000원</td>
+
+            </tr>
+            <tr>
+                <td>선물용</td>
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>52,000원</td>
+
+            </tr>
+            <tr>
+                <td>가정용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>30,000원</td>
+
+            </tr>
+            <tr>
+                <td>가정용</td>
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>47,000원</td>
+
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+
+
+    <h2>상품구성</h2>
+    <table>
+        <caption>선물용과 가정용 상품 구성</caption>
+         <colgroup>
+            <col style="background-color: pink;">
+            <col>
+            <col style="width: 150px;">
+            <col style="width: 150px">
+        </colgroup>    
+        <thead>
+            <!-- 행 -->
+            <tr>
+                <!-- 열 -->
+                <th>용도</th>
+                <th>중략</th>
+                <th>개수</th>
+                <th>가격</th>
+                <!-- th는 가운제로 정렬하고 강조해준다 -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">선물용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>35,000원</td>
+
+            </tr>
+            <tr>
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>52,000원</td>
+
+            </tr>
+            <tr>
+                <td rowspan="2">가정용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>30,000원</td>
+
+            </tr>
+            <tr>
+
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>47,000원</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <hr/>
+<table>
+    <caption>열 통합 테이블</caption>
+    
+    <thead>
+        <tr>
+            <th>1행 1열</th>
+            <th colspan="2">1행 2열</th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+            <td>2행 3열</td>
+        </tr>
+        <tr>
+            <td>3행 1열</td>
+            <td>3행 2열</td>
+            <td>3행 3열</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+
+</html>
