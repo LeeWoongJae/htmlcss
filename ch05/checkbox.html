@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <form action="">
         <fieldset>
             <legend>상품선택</legend>
             <p>주문할 상품을 선택해주세요</p>
@@ -44,7 +44,49 @@
             <label>
                 <input type = "checkbox" value="s_5">선물용 5kg</label>
                 <input type = "range" min="0" max="3" value="1">(최대 3개)
+                <!-- value로 초기값을 지정할수있다 -->
         </li>
         </ul>
+
+        <hr/>
+
+        <h1>날짜 지정하기</h1>
+        <input type ="date" min="2022-01-01" max="2022-01-15">
+        <input type="month">
+        <input type="week">
+
+        <h1>시간 지정하기</h1>
+        <input type="time">
+        <input type="datetime-local">
+
+
+
+        <hr/>
+        <form action="">
+            <fieldset>
+                <legend>Login</legend>
+                <label>ID : <input type="text" id="user_id" size=10></label>
+                <label>Password : <input type="password" id="user_pwd" size=10></label>
+                <input type="image" src="../images/login.png" alt="로그인">
+                <input type="reset" value="취소">
+            </fieldset>
+        </form>
+
+        <hr/>
+        <input type="button" value="새 창 열기" onclick="window.open('http://www.naver.com')">
+        <hr/>
+
+        <form>
+            <fieldset>
+                <legend>반품정보</legend>
+                <p>만일 수정한 상품에 문제가 있다면 즉시 <b>반품신청</b>해주세요</p>
+                <P>반품 신청 시 상품의 상태를 사진으로 첨부해 주세요</P>
+                <br/>
+                <input type="file">
+                <input type="hidden" value="사이트에 보이지 않는 내용">
+            </fieldset>
+        </form>
+
+        
 </body>
 </html>
