@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+
+<style>
+    li.new::after{
+        /* after or before 로 각 지정 태크쪽에 앞또는뒤에 추가 */
+        content : "NEW!!";
+        font-size:x-small;
+        padding:2px 4px;
+        margin:0 10px;
+        border-radius: 2px;
+        background:red;
+        color:white;
+    }
+</style>
+
+
+    <title>가상 요소</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>제품목록</h1>
+        <ul>
+            <li class="new">제품A</li>
+            <li>제품B</li>
+            <li>제품C</li>
+            <li class="new">제품D</li>
+        </ul>
+    </div>
+</body>
+</html>

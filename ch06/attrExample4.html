@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <style>
+        div :nth-child(3){
+            background-color: darkblue;
+        }
+        div P:nth-of-type(3){
+            background-color: blueviolet;
+        }
+        table, tr , td{
+            border: 3px solid black;
+        }
+        table tr:nth-of-type(2n+1){
+            /* 무조건 0번쨰부터 시작하기 떄문에 1,3,5번쨰가 적용 */
+            background-color: lightcyan;
+            color:black;
+        }
+    </style>
+    <title>구조 가상 클래스</title>
+</head>
+<body>
+    <h3>구조 가상 클래스</h3>
+    <div class="contents">
+        <h2>이용 안내</h2>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eaque veniam laboriosam, consectetur nihil accusamus suscipit voluptatem officiis minima, sequi et voluptatibus sed eos? Harum temporibus omnis officiis animi voluptatum!</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam provident fugit doloribus. Sapiente libero fugiat ratione modi incidunt, eaque et sed dicta, necessitatibus est quibusdam itaque aperiam reprehenderit, facilis consequuntur?</P>
+        <h2>객실 소개</h2>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. A reiciendis deleniti alias, totam sequi earum cumque atque sapiente asperiores similique tempore, libero laboriosam molestias eligendi sint nemo est? Vero, alias!</P>
+        <h2>예약방법    및  요금</h2>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo deleniti eos consequuntur tempora error officia odit! Voluptas laudantium architecto quia laboriosam, sit distinctio eius animi molestias reprehenderit ab libero error!</P>
+
+    </div>
+    <table>
+        <tr>
+            <td>HTML</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+        </tr>
+        <tr>
+            <td>자바 스크립트</td>
+        </tr>
+        <tr>
+            <td>React</td>
+        </tr>
+        <tr>
+            <td>node-js</td>
+        </tr>
+    </table>
+</body>
+</html>
