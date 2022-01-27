@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        ul,
+        li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px;
+            border-top: 1px solid silver;
+            border-bottom: 1px solid silver;
+        }
+
+        header > * {
+            display: inline-block;
+            margin-right: 150px;
+        }
+
+        header nav ul li {
+            float: left;
+            font-weight: bold;
+            font-size: large;
+            padding: 0 13px;
+        }
+
+        aside {
+            /* 좌측 네비게이션 부분 */
+            width: 20%;
+            /* text-align: center; */
+            float: left;
+            padding: 10px;
+            /* border-bottom: 1px solid silver; */
+        }
+
+        /* #alarm{
+            font-size: xx-large;
+            text-align: left;
+            padding:10px;
+            margin-top: 30px;
+            margin-bottom: 0;
+        } */
+        aside>div {
+            font-size: 30px;
+            padding: 10px;
+            /* float: left; */
+            text-align: left;
+            margin: 15px 0 30px 0;
+            color: rgb(88, 87, 87);
+            border-bottom: 3px solid silver;
+        }
+
+        aside>nav>ul>li {
+
+            border-bottom: 1px solid silver;
+            padding: 10px;
+            margin: 5px 0;
+            font-weight: bold;
+            font-size: medium;
+            color: rgb(141, 139, 139);
+        }
+
+        .navi a:link,
+        .navi a:visited {
+            display: block;
+            color: rgb(88, 87, 87);
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navi a:visited {
+            display: block;
+            background-color: lime;
+            color: black;
+            border-bottom:1px solid chartreuse;
+
+        }
+
+        .navi a:hover,
+        .navi a:focus {
+            color: green;
+            border-bottom: 1px solid green;
+            padding: 5px 0;
+        }
+
+        .navi a:active {
+            color: green;
+            border-bottom: 1px solid green;
+            padding: 5px 0;
+        }
+
+        .navi2 a:link,
+        .navi2 a:visited {
+            display: block;
+            color: rgb(104, 103, 103);
+            text-decoration: none;
+        }
+        .navi2 a:visited {
+            text-decoration: chartreuse;
+        }
+
+        .navi2 a:hover, .navi2 a:focus {
+            color: white;
+            background-color: springgreen;
+            padding: 10px 0;
+        }
+
+        .navi2 a:active {
+            color: green;
+            background-color: springgreen;
+            padding: 5px 0;
+        }
+
+        main {
+            width: 80%;
+            float: left;
+            padding: 10px 20px;
+        }
+
+        main>section:first-child>div:first-child {
+            /* 공고/공시 지정 */
+            font-weight: 900;
+            font-size: 38px;
+            padding: 20px 0;
+            border-bottom: 3px solid black;
+        }
+
+        main>section:first-child>div+div>ul>li {
+            /* Home ~ 공고/공시 부분 */
+            float: right;
+            padding: 3px;
+            font-size: small;
+        }
+
+        #red {
+            color: red;
+        }
+
+        main>section:first-child>div:last-child {
+            clear: both;
+        }
+
+        main>section:first-child>div:last-child > * {
+            height: 30px;
+        }
+
+        main>section:first-child>div:nth-of-type(3){
+            /* 검색 box 지정 */
+            float: left;
+            margin: 3px;
+        }
+        main>section:first-child>div:nth-of-type(3)>div{
+            /* 검색 box 지정 */
+            float: right;
+            margin: 3px;
+        }
+
+        table {
+            border-collapse: collapse;
+            font-size: small;
+
+        }
+
+        th {
+            border-top: 3px solid black;
+            border-bottom: 1px solid black;
+            padding: 10px 0;
+
+        }
+
+        td {
+            text-align: center;
+            border-bottom: 1px solid lightgray;
+        }
+
+        tbody>tr>td:nth-of-type(2) {
+            float: left;
+        }
+
+        main>section:nth-of-type(2)>div {
+            text-align: center;
+        }
+
+        main>section:nth-of-type(2)>div>div {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        span {
+            padding: 0 5px;
+            font-size: 15px;
+        }
+
+        select {
+            padding: 5px 5px;
+        }
+    </style>
+
+    <title>공고 / 공시</title>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <nav class="navi">
+                <ul>
+                    <li><a href="#">감염병</a></li>
+                    <li><a href="#">건강정보</a></li>
+                    <li><a href="#">정책정보</a></li>
+                    <li><a href="#">연구개발</a></li>
+                    <li><a href="#">알림자료</a></li>
+                    <li><a href="#">간생물+통계</a></li>
+                    <li><a href="#">민원정보공개</a></li>
+                    <li><a href="#">기관소개</a></li>
+                    <li><a href="#">사업별누리집</a></li>
+                </ul>
+            </nav>
+
+        </header>
+        <aside>
+            <div>알림자료</div>
+            <nav class="navi2">
+                <ul>
+                    <li>이달의건강소식</li>
+                    <li>보도자료</li>
+                    <li>포토뉴스</li>
+                    <li>홍보자료</li>
+                    <li>공지사항</li>
+                    <li><a href="#">공고/공시</a></li>
+                    <li>채용공고</li>
+                    <li>법령지침서식</li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section>
+                <div>공고/공시</div>
+                <div>
+                    <ul>
+                        <li>Home&nbsp;&gt;</li>
+                        <li>&nbsp;알림자료&nbsp;&gt;</li>
+                        <li>&nbsp;공고/공시</li>
+                    </ul>
+                </div>
+                <div><p>전체 3,320건,현재페이지<span id="red">2</span>/332</p></div>
+                <div>
+                    <select>
+                            <option value="title">제목</option>
+                            <option value="writer">작성자</option>
+                            <option value="content">글내용</option>
+                    </select>
+                        <input type="search" placeholder="검색어를 입력하세요">
+                        <input type="button" value="검색">
+                </div>
+            </section>
+            <section>
+                <table>
+                    <colgroup>
+                        <col style="width: 5%;">
+                        <col style="width: 50%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>작성일자</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3310</td>
+                            <td>「건강정보 개발 및 국가건강종보포털 운영」2022년 연간위...</td>
+                            <td>만성질환예방과</td>
+                            <td>2021-12-28</td>
+                            <td>137</td>
+                        </tr>
+                        <tr>
+                            <td>3309</td>
+                            <td>
+                                <p>국제공인예방접종지정기관 지정 공고</p>
+                            </td>
+                            <td>질병관리청 검역정책과</td>
+                            <td>2021-12-23</td>
+                            <td>305</td>
+                        </tr>
+                        <tr>
+                            <td>3308</td>
+                            <td>
+                                <p>2022년 환전외국환은행 선정결과 공고</p>
+                            </td>
+                            <td>백신계약팀</td>
+                            <td>2021-12-23</td>
+                            <td>184</td>
+                        </tr>
+                        <tr>
+                            <td>3307</td>
+                            <td>
+                                <P>2021년 질병관리청 정책연구용역(강원도 홍천군...)</P>
+                            </td>
+                            <td>운영지원과</td>
+                            <td>2021-12-20</td>
+                            <td>378</td>
+                        </tr>
+                        <tr>
+                            <td>3306</td>
+                            <td>2021년 질병관리청 정책연구용역(국민건강영양조사 원시자...)</td>
+                            <td>운영지원과</td>
+                            <td>2021-12-17</td>
+                            <td>432</td>
+                        </tr>
+                        <tr>
+                            <td>3305</td>
+                            <td>2021년 질병관리쳥 건강영양조사분석과 정책연구용역(3건)...</td>
+                            <td>운영지원과</td>
+                            <td>2021-12-14</td>
+                            <td>770</td>
+                        </tr>
+                        <tr>
+                            <td>3304</td>
+                            <td>「제1차 기후보건영향평가」공정회 개최 공고</td>
+                            <td>미래질병대비과</td>
+                            <td>2021-12-08</td>
+                            <td>438</td>
+                        </tr>
+                        <tr>
+                            <td>3303</td>
+                            <td>2021년 질병관리청 정책연구용역(인권 관점의 방역체계 구...)</td>
+                            <td>운영지원과</td>
+                            <td>2021-12-07</td>
+                            <td>633</td>
+                        </tr>
+                        <tr>
+                            <td>3302</td>
+                            <td>2021년 질병관리청 만성질환 관리과 정책연구용역(4건)입...</td>
+                            <td>운영지원과</td>
+                            <td>2021-12-07</td>
+                            <td>583</td>
+                        </tr>
+                        <tr>
+                            <td>3301</td>
+                            <td>2021년 질병관리청 정책연구용역(404호,405호)입찰 공고...</td>
+                            <td>운영지원과</td>
+                            <td>2021-12-06</td>
+                            <td>500</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div>
+                    <span>&lt;&lt;</span>
+                    <span>&lt;</span>
+                    <div>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span>10</span>
+                    </div>
+                    <span>&gt;</span>
+                    <span>&gt;&gt;</span>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        a[class=button]{
+            background-color: red;
+        }
+        /* 여러 값 중 특정 속성만 */
+        [class~=button]{
+            border:1px solid black;
+            border-radius: 5px;
+        }
+        /*특정한 값이 포함된 속성값  */
+         a[title |= us]{
+             /* ~= 보다는 찾는 범위가 넓다 */
+             font-weight: bold;
+         }
+         /* 특정 값으로 시작되는 속성값 */
+         a[title ^= j]{
+             background-color : violet;
+         }
+         /* 특정한 앖으로 끝 나는 속성값 */
+         a[href $= xls]{
+             background-color: brown;
+         }
+         /* 일부 값이 포함된 속성값(위치는 몰라도 포함된다는걸 알 경우) */
+         [href *= css]{
+             background-color: chartreuse;
+             color:darkviolet;
+         }
+         
+    </style>
+    <title>속성 선택자</title>
+</head>
+<body>
+    <!-- 속성 선택자의 값이 정확히 일치하는 경우 -->
+    <h3>속성 선택자 : 여러 값 중 특정 값 지정</h3>
+    <ul>
+        <li><a href="#" class="flat">메뉴1</a></li>
+        <li><a href="#" class="flat">메뉴2</a></li>
+        <li><a href="#" class="button">메뉴3</a></li>
+        <li><a href="#" class="flat button">메뉴4</a></li>
+
+    </ul>
+
+    <hr />
+    <h3>속성 선택자 : 속성값 중 일부분만</h3>
+    <ul>
+        <li>외국어 서비스 : </li>
+        <li><a title="us-english">영어</a></li>
+        <li><a title="ja">일본어</a></li>
+        <li><a title="chn">중국어</a></li>
+    </ul>
+
+    <hr />
+    <ul>
+        <li><a href="intro.hwp">HWP파일</a></li>
+        <li><a href="intro.xls">XLS파일</a></li>
+
+    </ul>
+
+    <hr />
+    <ul>
+        <li><a href="http;//html.spec.whatwg.org">HTML  표준안 사이트</a></li>
+        <li><a href="http://www.w3.org/TR/selector">CSS selector Level 3</a></li>
+        <li><a href="http://www.w3.org/TR/css3-mediaqueries">미디어쿼리</a></li>
+    </ul>
+</body>
+</html>

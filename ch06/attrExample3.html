@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        .navi ul {
+            list-style: none;
+            /* ul의 불릿(표시방법)제거 */
+
+        }
+
+        .navi ul li {
+            float: left;
+            /* 왼쪽부터 차례대로 정렬 */
+            padding: 10px;
+        }
+
+        .navi a:link,
+        .navi a:visited {
+            /* 방문했나 하지 않았나 정의 */
+            display: block;
+            font-size: 16px;
+            color: forestgreen;
+            text-decoration: none;
+            /* 밑줄 제거 */
+            text-align: center
+        }
+
+        .navi a:hover {
+            /* 마우스를 위에 올려뒀을시 */
+            background-color: black;
+            color: cornflowerblue;
+        }
+
+        .navi a:focus {
+            /* 마우스를 클릭하고 난뒤 */
+            background-color: crimson;
+            color: black;
+        }
+
+        .navi a:active {
+            /* 클릭되어져있을동안 */
+            background-color: darkorange;
+
+        }
+
+        /* 위까지 순서대로 꼭! 적용 */
+
+        .contents {
+            margin: 30px auto;
+            width: 400px;
+            padding: 1px solid black;
+            border-radius: 5px;
+        }
+
+        #intro:target {
+            background-color: blue;
+            color:white;
+        }
+        #signup textarea:disabled{
+            background-color: pink;
+            color:tomato;
+        }
+        #signup textarea:enabled{
+            background-color: green;
+            color:turquoise;
+        }
+        #signup input:checked + label{
+            color:crimson;
+            font-weight: bold;
+        }
+        #signup input:not([type="radio"]){
+            /* 적용할 속성을 선택할경우 여러종류를 지정할수있다 */
+            border:5px solid cornflowerblue;
+            border-radius: 5px;
+        }
+    </style>
+
+    <title>가상 클래스</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navi">
+            <ul>
+                <li><a href="intro">이용안내</a></li>
+                <li><a href="room">객실안내</a></li>
+                <li><a href="reservation">예약방법 및 요금 안내</a></li>
+                <li><a href="signup">예약안내</a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <div id="intro" class="contents">
+        <h2>이용안내</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, et iure. Delectus quo iusto, aperiam libero
+            labore est quidem corrupti dolores, suscipit expedita laborum sapiente. Ducimus totam rem veritatis
+            delectus.</p>
+
+    </div>
+    <div id="room" class="contents">
+        <h2>객실 소개</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, fugit corrupti. Placeat similique eveniet
+            voluptates dolorum consequatur, debitis incidunt voluptas architecto nesciunt quod error quibusdam commodi.
+            Consequatur tenetur soluta excepturi?</p>
+    </div>
+
+    <div id="reservation" class="contents">
+        <h2>예약방법 및 요금안내</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus reiciendis, voluptatem dignissimos sequi
+            molestias sapiente facere provident enim itaque vero quibusdam. Sunt molestiae esse modi. Laborum temporibus
+            repellendus excepturi a.</p>
+    </div>
+
+    <div id="signup">
+        <h3>약관</h3>
+        <textarea enabled>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit quas quis laudantium, consequuntur accusantium aliquam fugiat ab illum quidem, est officiis blanditiis? Ipsam explicabo earum omnis accusantium voluptates in molestiae?
+        </textarea>
+        <h3>...</h3>
+        <ul>
+            <li>
+                <input type="radio" name="room" id="basic">
+                <label for="basic">기본형(최대2인)</label>
+
+            </li>
+            <li>
+                <input type="radio" name="room" id="family">
+                <label for="family">가족형(최대8명)</label>
+            </li>
+            <li>
+                <input type="button" name="selected" value="확인">
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
